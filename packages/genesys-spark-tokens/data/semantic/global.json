@@ -411,6 +411,18 @@
         "type": "spacing",
         "description": "The recommended padding for extra-small-sized interactive components."
       }
+    },
+    "x_small": {
+      "height": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "This token is recommended for special interactive elements, such as color swatches in the Rich Text Editor."
+      },
+      "width": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "This token is recommended for special interactive elements, such as color swatches in the Rich Text Editor."
+      }
     }
   },
   "focus_outline": {
@@ -609,6 +621,12 @@
         "value": "{border_width.1}",
         "type": "borderWidth",
         "description": "The recommended border width for the dividers within containers, like cards or menus or popovers."
+      }
+    },
+    "emphasis": {
+      "width": {
+        "value": "{size.4xs}",
+        "type": "sizing"
       }
     },
     "2xs": {
@@ -969,6 +987,40 @@
       "value": "{z_index.600}",
       "type": "zindex",
       "description": "The recommended z-index for modals."
+    }
+  },
+  "divider": {
+    "medium": {
+      "padding": {
+        "value": "0 {spacing.4xs}",
+        "type": "spacing"
+      }
+    },
+    "small": {
+      "width": {
+        "value": "{size.5xs}",
+        "type": "sizing",
+        "description": "This token is for dividers that are made with rectangles."
+      },
+      "height": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "This token is for dividers that are made with rectangles."
+      }
+    }
+  },
+  "code": {
+    "sm": {
+      "regular": {
+        "value": {
+          "fontFamily": "{font_family.monospace.body}",
+          "fontWeight": "{font_weight.regular}",
+          "fontSize": "{font_size.xs}",
+          "lineHeight": "{line_height.2xs}"
+        },
+        "type": "typography",
+        "description": "This typography token is recommended to be used only for code blocks."
+      }
     }
   }
 }
