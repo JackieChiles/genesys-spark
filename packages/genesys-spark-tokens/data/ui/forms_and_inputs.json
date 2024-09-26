@@ -1257,6 +1257,10 @@
             },
             "type": "border"
           }
+        },
+        "min_height": {
+          "value": "112px",
+          "type": "sizing"
         }
       },
       "drop_zone_text": {
