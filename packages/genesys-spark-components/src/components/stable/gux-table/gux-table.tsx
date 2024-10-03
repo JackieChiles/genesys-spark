@@ -43,9 +43,7 @@ export class GuxTable {
 
   private resizeObserver: ResizeObserver;
   private slotObserver: MutationObserver = new MutationObserver(() => {
-    if (this.selectAllCheckbox) {
-      this.prepareSelectableRows();
-    }
+    this.prepareSelectableRows();
     forceUpdate(this);
   });
   private i18n: GetI18nValue;

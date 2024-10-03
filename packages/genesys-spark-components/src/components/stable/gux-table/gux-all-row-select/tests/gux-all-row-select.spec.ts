@@ -28,7 +28,7 @@ describe('gux-all-row-select', () => {
     expect(inputElement.indeterminate).toBe(false);
   });
 
-  it('should handle the setCheckedState method', async () => {
+  it('should handle the setChecked method', async () => {
     const html = '<gux-all-row-select></gux-all-row-select>';
     const page = await newSpecPage({ components, html, language });
 
@@ -36,18 +36,13 @@ describe('gux-all-row-select', () => {
     const inputElement = page.root.shadowRoot.querySelector('input');
 
     expect(inputElement.checked).toBe(false);
-    expect(inputElement.indeterminate).toBe(undefined);
 
-    await component.setCheckedState('checked');
+    await component.setChecked(true);
+    await page.waitForChanges();
     expect(inputElement.checked).toBe(true);
-    expect(inputElement.indeterminate).toBe(false);
 
-    await component.setCheckedState('unchecked');
+    await component.setChecked(false);
+    await page.waitForChanges();
     expect(inputElement.checked).toBe(false);
-    expect(inputElement.indeterminate).toBe(false);
-
-    await component.setCheckedState('indeterminate');
-    expect(inputElement.checked).toBe(false);
-    expect(inputElement.indeterminate).toBe(true);
   });
 });

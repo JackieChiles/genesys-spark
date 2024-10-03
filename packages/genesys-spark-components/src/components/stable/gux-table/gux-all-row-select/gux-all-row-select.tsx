@@ -13,7 +13,6 @@ import {
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import tableResources from '../i18n/en.json';
-import { GuxAllRowSelectState } from './gux-all-row-select.types';
 
 @Component({
   styleUrl: 'gux-all-row-select.scss',
@@ -51,23 +50,8 @@ export class GuxAllRowSelect {
   }
 
   @Method()
-  async setCheckedState(checkedState: GuxAllRowSelectState): Promise<void> {
-    switch (checkedState) {
-      case 'checked':
-        this.inputElement.checked = true;
-        this.inputElement.indeterminate = false;
-        break;
-      case 'unchecked':
-        this.inputElement.checked = false;
-        this.inputElement.indeterminate = false;
-        break;
-      case 'indeterminate':
-        this.inputElement.checked = false;
-        this.inputElement.indeterminate = true;
-        break;
-      default:
-        break;
-    }
+  async setChecked(checked: boolean): Promise<void> {
+    this.selected = checked;
   }
 
   async componentWillLoad(): Promise<void> {
