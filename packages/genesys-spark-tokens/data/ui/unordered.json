@@ -545,7 +545,7 @@
     "info": {
       "bold": {
         "background_color": {
-          "value": "{foreground.system.info.accent}",
+          "value": "{background.system.info.tonal_high}",
           "type": "color"
         },
         "foreground_color": {
@@ -567,7 +567,7 @@
     "success": {
       "bold": {
         "background_color": {
-          "value": "{foreground.system.success.accent}",
+          "value": "{background.system.success.tonal_high}",
           "type": "color"
         },
         "foreground_color": {
@@ -589,7 +589,7 @@
     "warning": {
       "bold": {
         "background_color": {
-          "value": "{foreground.system.warning.accent}",
+          "value": "{background.system.warning.tonal_high}",
           "type": "color"
         },
         "foreground_color": {
@@ -611,7 +611,7 @@
     "error": {
       "bold": {
         "background_color": {
-          "value": "{foreground.system.error.accent}",
+          "value": "{background.system.error.tonal_high}",
           "type": "color"
         },
         "foreground_color": {

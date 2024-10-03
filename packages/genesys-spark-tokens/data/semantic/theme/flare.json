@@ -467,7 +467,7 @@
         },
         "error": {
           "10": {
-            "value": "{color.pepper.500}",
+            "value": "{color.pepper.600}",
             "type": "color"
           }
         }
@@ -500,7 +500,7 @@
           "type": "color"
         },
         "40": {
-          "value": "{color.plum.700}",
+          "value": "{color.genesys_navy.600}",
           "type": "color"
         }
       },

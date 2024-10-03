@@ -173,6 +173,10 @@
             "type": "color"
           },
           "30": {
+            "value": "{color_legacy.green.80}",
+            "type": "color"
+          },
+          "35": {
             "value": "{color_legacy.green.60}",
             "type": "color"
           },
