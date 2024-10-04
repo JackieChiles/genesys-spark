@@ -8,10 +8,6 @@
       "value": "{theme.border_radius.container.large}",
       "type": "borderRadius"
     },
-    "border_radius-copy": {
-      "value": "{theme.border_radius.container.large}",
-      "type": "borderRadius"
-    },
     "default": {
       "border": {
         "value": {
