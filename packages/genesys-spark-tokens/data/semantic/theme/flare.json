@@ -281,7 +281,7 @@
             "type": "color"
           },
           "100": {
-            "value": "{color.genesys_orange.800}",
+            "value": "{color.genesys_orange.700}",
             "type": "color"
           },
           "110": {
