@@ -1110,6 +1110,8 @@
     "$figmaVariableReferences": {
       "color.focus": "4903357e580485abfbc7eec7c53a94eb42f7f2fd",
       "card.background-color": "f1ee3f17d5190864c318ecdf9f74569843a5a447",
+      "card.border_radius": "27d8a98ce6e6f6132f91ec3fd77a758a74c2969a",
+      "card.padding": "af1ed011aaf01f9be7575a712353e25bb6aaeeda",
       "tooltip.light.background_color": "05ae3c8ab3aa8ad19b4e54e876c7ddb015649050",
       "tooltip.light.foreground_color": "22a3415175c18086f4a0ec30fe57099d874f0618",
       "tooltip.dark.background_color": "bf65dd11afdeb56537f297f46d96aaf081fe1575",
