@@ -9,9 +9,12 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: var(--gse-semantic-zIndex-popover);
+  z-index: var(
+    --gse-semantic-zIndex-popover
+  ); // TODO: this will not work because the popover will display in the top layer. Figure out a solution.
+
   display: inline-block;
-  min-width: 280px;
+  min-width: 280px; // TODO: add possible token?
   padding: var(--gse-ui-popover-gap);
   overflow: hidden;
   background-color: var(--gse-ui-popover-backgroundColor);

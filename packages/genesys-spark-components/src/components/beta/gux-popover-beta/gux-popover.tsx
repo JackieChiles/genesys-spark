@@ -137,8 +137,10 @@ export class GuxPopover {
 
   private getForElement(): HTMLInputElement {
     if (this.for) {
-      const forElement = document.getElementById(this.for) as HTMLInputElement;
-
+      const forElement = findElementById(
+        this.root,
+        this.for
+      ) as HTMLInputElement;
       if (!forElement) {
         this.logForAttributeError();
       }
@@ -259,7 +261,6 @@ export class GuxPopover {
 
     this.popupElement.popover = 'manual';
     this.forElement.popoverTargetElement = this.popupElement;
-    this.forElement.popoverTargetAction = 'toggle';
 
     if (this.isOpen) {
       this.popupElement.showPopover();
@@ -294,10 +295,9 @@ export class GuxPopover {
 
   render(): JSX.Element {
     return (
-      <popover
+      <div
         ref={(el: HTMLDivElement) => (this.popupElement = el)}
         class={{
-          'gux-hidden': !this.isOpen,
           'gux-popover-wrapper': true
         }}
         data-placement
@@ -315,7 +315,7 @@ export class GuxPopover {
         <div class="gux-popover-content">
           <slot />
         </div>
-      </popover>
+      </div>
     ) as JSX.Element;
   }
 }
