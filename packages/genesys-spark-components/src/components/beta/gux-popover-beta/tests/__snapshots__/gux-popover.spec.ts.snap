@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-popover #render should render popover 1`] = `
-<gux-popover for="popover-target" id="popover-example" is-open="" position="top">
+<gux-popover-beta for="popover-target" id="popover-example" is-open="false" position="top">
   <template shadowrootmode="open">
-    <div class="gux-popover-wrapper" data-placement>
+    <div class="gux-hidden gux-popover-wrapper" data-placement popover="manual">
       <div class="gux-arrow">
         <div class="gux-arrow-caret"></div>
       </div>
@@ -21,5 +21,5 @@ exports[`gux-popover #render should render popover 1`] = `
   <div>
     popover content
   </div>
-</gux-popover>
+</gux-popover-beta>
 `;

@@ -126,7 +126,7 @@ export class GuxPopover {
 
     if (clickedForElement) {
       this.popupElement.togglePopover();
-      this.isOpen = true;
+      this.isOpen = !this.isOpen;
       this.runUpdatePosition();
     }
   }
@@ -259,7 +259,6 @@ export class GuxPopover {
       return;
     }
 
-    this.popupElement.popover = 'manual';
     this.forElement.popoverTargetElement = this.popupElement;
 
     if (this.isOpen) {
@@ -298,9 +297,11 @@ export class GuxPopover {
       <div
         ref={(el: HTMLDivElement) => (this.popupElement = el)}
         class={{
-          'gux-popover-wrapper': true
+          'gux-popover-wrapper': true,
+          'gux-hidden': !this.isOpen
         }}
         data-placement
+        popover="manual"
       >
         <div
           ref={(el: HTMLDivElement) => (this.arrowElement = el)}

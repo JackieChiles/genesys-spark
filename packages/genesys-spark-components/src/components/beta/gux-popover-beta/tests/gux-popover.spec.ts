@@ -24,10 +24,10 @@ const html = `
     <button id="popover-target">
       Example Element
     </button>
-    <gux-popover id="popover-example" position="top" for="popover-target" is-open="false">
+    <gux-popover-beta id="popover-example" position="top" for="popover-target" is-open="false">
       <span slot="title">Title</span>
       <div>popover content</div>
-    </gux-popover>
+    </gux-popover-beta>
   </div>`;
 
 describe('gux-popover', () => {
