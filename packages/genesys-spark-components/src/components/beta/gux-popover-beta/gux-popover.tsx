@@ -297,8 +297,7 @@ export class GuxPopover {
       <div
         ref={(el: HTMLDivElement) => (this.popupElement = el)}
         class={{
-          'gux-popover-wrapper': true,
-          'gux-hidden': !this.isOpen
+          'gux-popover-wrapper': true
         }}
         data-placement
         popover="manual"

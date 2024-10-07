@@ -13,7 +13,6 @@
     --gse-semantic-zIndex-popover
   ); // TODO: this will not work because the popover will display in the top layer. Figure out a solution.
 
-  display: inline-block;
   min-width: 280px; // TODO: add possible token?
   padding: var(--gse-ui-popover-gap);
   overflow: hidden;
