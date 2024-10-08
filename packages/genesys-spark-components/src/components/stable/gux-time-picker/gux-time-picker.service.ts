@@ -32,43 +32,38 @@ export function getTimeDisplayValues(
     );
   }, [] as GuxISOHourMinute[]);
 
-  return applyHourBoundaries(clockType, hourOptionsFormatted, min, max);
+  return applyHourBoundaries(hourOptionsFormatted, min, max);
 }
 
-function applyHourBoundaries(
-  clockType: GuxClockType,
-  hours: string[],
-  min?: string,
-  max?: string
-) {
-  // TODO: should I validate min and/or max prop's format that's passed in or is that unnecessary?
-
+function applyHourBoundaries(hours: string[], min?: string, max?: string) {
   if (min) {
     hours = hours.filter(
-      hour =>
-        parseFloat(formatHour(clockType, hour)) >
-        parseFloat(formatHour(clockType, min))
+      hour => convertHourToSeconds(hour) > convertHourToSeconds(min)
     );
   }
 
   if (max) {
     hours = hours.filter(
-      hour =>
-        parseFloat(formatHour(clockType, hour)) <
-        parseFloat(formatHour(clockType, max))
+      hour => convertHourToSeconds(hour) < convertHourToSeconds(max)
     );
   }
 
   return hours as GuxISOHourMinute[];
 }
 
-function formatHour(clockType: GuxClockType, hour: string) {
-  // The 12h clock type will have all "12:xx" hour options at the front of the list (e.g. 12:00, 12:30, 1:00, 1:30, 2:00, etc)
-  // so I'm putting a decimal point in front of the "12:xx" hour options so that the list can be in numerically ascending order when
-  // it's time to apply min/max boundaries
-  return (
-    clockType === '12h' && hour.startsWith('12:') ? `.${hour}` : hour
-  ).replace(':', '');
+function convertHourToSeconds(hour: string): number {
+  const date = new Date();
+
+  // Split the time string into hours and minutes
+  const [hours, minutes] = hour.split(':');
+
+  // Set the hours and minutes of the Date object
+  date.setHours(parseFloat(hours));
+  date.setMinutes(parseFloat(minutes));
+  date.setSeconds(0);
+  const seconds = date.getSeconds();
+
+  return seconds;
 }
 
 export function getLocaleClockType(root: HTMLElement): GuxClockType {

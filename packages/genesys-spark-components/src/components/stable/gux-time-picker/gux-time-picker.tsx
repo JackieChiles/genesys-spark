@@ -108,6 +108,10 @@ export class GuxTimePicker {
 
     this.i18n = await buildI18nForComponent(this.root, translationResources);
     this.clockType = this.clockType || getLocaleClockType(this.root);
+
+    if (this.clockType == '12h' && (this.min || this.max)) {
+      console.error('clock type must be "24h" when using min/max props');
+    }
   }
 
   private updateValue(
