@@ -907,7 +907,7 @@
       },
       "hover": {
         "background_color": {
-          "value": "{color.blueberry.100}",
+          "value": "{background.interactive.ghost.hover}",
           "type": "color"
         },
         "foreground_color": {
@@ -921,7 +921,7 @@
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.interactive.primary.default}",
           "type": "color"
         }
       }

@@ -1293,18 +1293,18 @@
     "dropdown": {
       "hover": {
         "background_color": {
-          "value": "#EFF0FE",
+          "value": "{background.container.elevated.hover}",
           "type": "color"
         }
       },
       "active": {
         "background_color": {
-          "value": "#CED2FC",
+          "value": "{background.container.elevated.active}",
           "type": "color"
         }
       },
       "foreground_color": {
-        "value": "#626E84",
+        "value": "{foreground.form_control.text_input.icon}",
         "type": "color"
       },
       "flag": {
@@ -1354,7 +1354,7 @@
     },
     "country_code": {
       "foreground_color": {
-        "value": "#626E84",
+        "value": "{foreground.container.high_emphasis}",
         "type": "color"
       }
     },
