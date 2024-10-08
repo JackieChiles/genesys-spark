@@ -419,7 +419,7 @@
         }
       },
       "padding": {
-        "value": "{container.xs.padding} {container.2xs.padding}",
+        "value": "{container.xs.padding} 1px",
         "type": "spacing"
       },
       "divider": {
