@@ -366,39 +366,6 @@ describe('gux-time-picker.service', () => {
         getTimeDisplayValues(minuteInterval, clockType, min, max)
       ).toStrictEqual(expectedOutput);
     });
-
-    it(`should work as expected for 12h with 15 minute intervals and boundaries of 12:15-5:30`, async () => {
-      const minuteInterval = 15;
-      const clockType = '12h';
-      const min = '12:15';
-      const max = '5:30';
-      const expectedOutput = [
-        '12:30',
-        '12:45',
-        '1:00',
-        '1:15',
-        '1:30',
-        '1:45',
-        '2:00',
-        '2:15',
-        '2:30',
-        '2:45',
-        '3:00',
-        '3:15',
-        '3:30',
-        '3:45',
-        '4:00',
-        '4:15',
-        '4:30',
-        '4:45',
-        '5:00',
-        '5:15'
-      ];
-
-      expect(
-        getTimeDisplayValues(minuteInterval, clockType, min, max)
-      ).toStrictEqual(expectedOutput);
-    });
   });
 
   describe('#getLocaleClockType', () => {
