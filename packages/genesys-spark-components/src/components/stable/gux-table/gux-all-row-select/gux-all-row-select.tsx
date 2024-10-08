@@ -40,7 +40,7 @@ export class GuxAllRowSelect {
   onCheck(event: CustomEvent): void {
     event.stopPropagation();
     this.selected = this.inputElement.checked;
-    this.internalallrowselectchange.emit(this.inputElement.checked);
+    this.internalallrowselectchange.emit(this.selected);
   }
 
   @Method()
@@ -52,6 +52,7 @@ export class GuxAllRowSelect {
   @Method()
   async setChecked(checked: boolean): Promise<void> {
     this.selected = checked;
+    this.internalallrowselectchange.emit(this.selected);
   }
 
   async componentWillLoad(): Promise<void> {

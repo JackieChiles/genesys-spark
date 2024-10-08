@@ -258,7 +258,7 @@ export class GuxTable {
       const allSelected = selectedRows.length === filterDisabled.length;
       const noneSelected = selectedRows.length === 0;
 
-      selectAllCheckbox.setChecked(hasRows && allSelected);
+      selectAllCheckbox.selected = hasRows && allSelected;
 
       void selectAllCheckbox.setIndeterminate(
         hasRows && !allSelected && !noneSelected
@@ -268,11 +268,9 @@ export class GuxTable {
 
   // Handle a change in state of the select all checkbox
   private handleSelectAllRows(selected: boolean): void {
-    const selectAllCheckbox = this.selectAllCheckbox;
     const rowCheckboxes = this.rowCheckboxes;
 
     rowCheckboxes.forEach(rowBox => {
-      selectAllCheckbox.setChecked(selected);
       if (!rowBox.disabled) {
         rowBox.selected = selected;
         this.updateRowSelection(rowBox);
