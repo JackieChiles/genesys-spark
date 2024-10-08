@@ -36,16 +36,31 @@ export function getTimeDisplayValues(
 }
 
 function applyHourBoundaries(hours: string[], min?: string, max?: string) {
-  if (min) {
-    hours = hours.filter(
-      hour => hourToMilliseconds(hour) > hourToMilliseconds(min)
-    );
-  }
+  // Check if min and max are wrapped around (e.g. min of 22:00 and max of 04:00)
+  if (min && max && hourToMilliseconds(min) > hourToMilliseconds(max)) {
+    hours = hours.filter(hour => {
+      const hourConverted = hourToMilliseconds(hour);
+      const minConverted = hourToMilliseconds(min);
+      const maxConverted = hourToMilliseconds(max);
+      const dayCeiling = hourToMilliseconds('23:59');
 
-  if (max) {
-    hours = hours.filter(
-      hour => hourToMilliseconds(hour) < hourToMilliseconds(max)
-    );
+      return (
+        (hourConverted > minConverted && hourConverted < dayCeiling) ||
+        hourConverted < maxConverted
+      );
+    });
+  } else {
+    // min and max are not wrapped around (e.g. min of 03:30 and max of 20:00)
+    if (min) {
+      hours = hours.filter(
+        hour => hourToMilliseconds(hour) > hourToMilliseconds(min)
+      );
+    }
+    if (max) {
+      hours = hours.filter(
+        hour => hourToMilliseconds(hour) < hourToMilliseconds(max)
+      );
+    }
   }
 
   return hours as GuxISOHourMinute[];

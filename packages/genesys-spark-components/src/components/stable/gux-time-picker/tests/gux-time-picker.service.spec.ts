@@ -366,6 +366,27 @@ describe('gux-time-picker.service', () => {
         getTimeDisplayValues(minuteInterval, clockType, min, max)
       ).toStrictEqual(expectedOutput);
     });
+
+    it(`should work as expected for 24h with 30 minute intervals and wrapped around boundaries of 22:00-02:30`, async () => {
+      const minuteInterval = 30;
+      const clockType = '24h';
+      const min = '22:00';
+      const max = '02:30';
+      const expectedOutput = [
+        '00:00',
+        '00:30',
+        '01:00',
+        '01:30',
+        '02:00',
+        '22:30',
+        '23:00',
+        '23:30'
+      ];
+
+      expect(
+        getTimeDisplayValues(minuteInterval, clockType, min, max)
+      ).toStrictEqual(expectedOutput);
+    });
   });
 
   describe('#getLocaleClockType', () => {
