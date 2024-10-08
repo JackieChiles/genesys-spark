@@ -53,16 +53,11 @@ function applyHourBoundaries(hours: string[], min?: string, max?: string) {
 
 function convertHourToSeconds(hour: string): number {
   const date = new Date();
-
-  // Split the time string into hours and minutes
   const [hours, minutes] = hour.split(':');
-
-  // Set the hours and minutes of the Date object
   date.setHours(parseFloat(hours));
   date.setMinutes(parseFloat(minutes));
   date.setSeconds(0);
-  const seconds = date.getSeconds();
-
+  const seconds = date.getTime();
   return seconds;
 }
 
