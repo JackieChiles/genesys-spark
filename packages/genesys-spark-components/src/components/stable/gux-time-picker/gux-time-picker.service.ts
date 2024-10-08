@@ -38,20 +38,21 @@ export function getTimeDisplayValues(
 function applyHourBoundaries(hours: string[], min?: string, max?: string) {
   if (min) {
     hours = hours.filter(
-      hour => convertHourToSeconds(hour) > convertHourToSeconds(min)
+      hour => hourToMilliseconds(hour) > hourToMilliseconds(min)
     );
   }
 
   if (max) {
     hours = hours.filter(
-      hour => convertHourToSeconds(hour) < convertHourToSeconds(max)
+      hour => hourToMilliseconds(hour) < hourToMilliseconds(max)
     );
   }
 
   return hours as GuxISOHourMinute[];
 }
 
-function convertHourToSeconds(hour: string): number {
+function hourToMilliseconds(hour: string): number {
+  // Convert the hour to milliseconds from midnight
   const date = new Date();
   const [hours, minutes] = hour.split(':');
   date.setHours(parseFloat(hours));
