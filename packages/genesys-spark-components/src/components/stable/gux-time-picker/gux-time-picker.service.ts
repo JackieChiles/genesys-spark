@@ -32,7 +32,9 @@ export function getTimeDisplayValues(
     );
   }, [] as GuxISOHourMinute[]);
 
-  return applyHourBoundaries(hourOptionsFormatted, min, max);
+  return clockType === '24h'
+    ? applyHourBoundaries(hourOptionsFormatted, min, max)
+    : hourOptionsFormatted;
 }
 
 function applyHourBoundaries(hours: string[], min?: string, max?: string) {
