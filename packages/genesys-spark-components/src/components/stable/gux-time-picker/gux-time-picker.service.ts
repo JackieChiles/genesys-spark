@@ -47,20 +47,20 @@ function applyHourBoundaries(hours: string[], min?: string, max?: string) {
       const dayCeiling = hourToMilliseconds('23:59');
 
       return (
-        (hourConverted > minConverted && hourConverted < dayCeiling) ||
-        hourConverted < maxConverted
+        (hourConverted >= minConverted && hourConverted < dayCeiling) ||
+        hourConverted <= maxConverted
       );
     });
   } else {
     // min and max are not wrapped around (e.g. min of 03:30 and max of 20:00)
     if (min) {
       hours = hours.filter(
-        hour => hourToMilliseconds(hour) > hourToMilliseconds(min)
+        hour => hourToMilliseconds(hour) >= hourToMilliseconds(min)
       );
     }
     if (max) {
       hours = hours.filter(
-        hour => hourToMilliseconds(hour) < hourToMilliseconds(max)
+        hour => hourToMilliseconds(hour) <= hourToMilliseconds(max)
       );
     }
   }

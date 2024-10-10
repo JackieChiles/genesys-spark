@@ -338,6 +338,7 @@ describe('gux-time-picker.service', () => {
       const min = '08:30';
       const max = '20:00';
       const expectedOutput = [
+        '08:30',
         '09:00',
         '09:30',
         '10:00',
@@ -359,7 +360,8 @@ describe('gux-time-picker.service', () => {
         '18:00',
         '18:30',
         '19:00',
-        '19:30'
+        '19:30',
+        '20:00'
       ];
 
       expect(
@@ -378,6 +380,8 @@ describe('gux-time-picker.service', () => {
         '01:00',
         '01:30',
         '02:00',
+        '02:30',
+        '22:00',
         '22:30',
         '23:00',
         '23:30'
