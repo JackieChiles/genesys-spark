@@ -274,7 +274,7 @@
         }
       },
       "foreground_color": {
-        "value": "{foreground.surface.mid_emphasis}",
+        "value": "{foreground.container.mid_emphasis}",
         "type": "color"
       },
       "md": {
@@ -291,7 +291,7 @@
       },
       "border_left": {
         "color": {
-          "value": "{border.surface.emphasis.default}",
+          "value": "{border.container.emphasis.default}",
           "type": "color"
         },
         "width": {
