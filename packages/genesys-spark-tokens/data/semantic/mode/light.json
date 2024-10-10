@@ -105,42 +105,42 @@
       },
       "custom": {
         "tomato": {
-          "value": "{background.custom_accents.color_swatch.10}",
+          "value": "{theme.background.custom_accents.color_swatch.10}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         },
         "coral": {
-          "value": "{background.custom_accents.color_swatch.20}",
+          "value": "{theme.background.custom_accents.color_swatch.20}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         },
         "pear": {
-          "value": "{background.custom_accents.color_swatch.30}",
+          "value": "{theme.background.custom_accents.color_swatch.30}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         },
         "mango": {
-          "value": "{background.custom_accents.color_swatch.40}",
+          "value": "{theme.background.custom_accents.color_swatch.40}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         },
         "raspberry": {
-          "value": "{background.custom_accents.color_swatch.50}",
+          "value": "{theme.background.custom_accents.color_swatch.50}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         },
         "blueberry": {
-          "value": "{background.custom_accents.color_swatch.60}",
+          "value": "{theme.background.custom_accents.color_swatch.60}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         },
         "mineral": {
-          "value": "{background.custom_accents.color_swatch.70}",
+          "value": "{theme.background.custom_accents.color_swatch.70}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         },
         "islandaqua": {
-          "value": "{background.custom_accents.color_swatch.80}",
+          "value": "{theme.background.custom_accents.color_swatch.80}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         }
@@ -810,7 +810,7 @@
     },
     "divider": {
       "default": {
-        "value": "{foreground.divider.40}",
+        "value": "{theme.border.divider.20}",
         "type": "color",
         "description": "This color is for toolbar dividers, for example rich text editor and data table toolbars."
       }
