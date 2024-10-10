@@ -930,11 +930,11 @@
   },
   "size": {
     "5xs": {
-      "value": "1px",
+      "value": "2px",
       "type": "sizing"
     },
     "4xs": {
-      "value": "2px",
+      "value": "4px",
       "type": "sizing"
     },
     "xs": {
@@ -971,14 +971,6 @@
     },
     "3xs": {
       "value": "8px",
-      "type": "sizing"
-    },
-    "4xs": {
-      "value": "4px",
-      "type": "sizing"
-    },
-    "5xs": {
-      "value": "2px",
       "type": "sizing"
     },
     "6xs": {

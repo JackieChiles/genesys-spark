@@ -230,7 +230,7 @@
   "rte": {
     "code_block": {
       "background_color": {
-        "value": "{background.surface.page.tonal_medium}",
+        "value": "{background.container.page.tonal_medium}",
         "type": "color"
       },
       "border": {
@@ -246,7 +246,7 @@
         "type": "spacing"
       },
       "foreground_color": {
-        "value": "{foreground.surface.mid_emphasis}",
+        "value": "{foreground.container.mid_emphasis}",
         "type": "color"
       },
       "sm": {
