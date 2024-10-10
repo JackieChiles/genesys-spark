@@ -302,7 +302,7 @@
     },
     "heading_1": {
       "foreground_color": {
-        "value": "{foreground.surface.mid_emphasis}",
+        "value": "{foreground.container.mid_emphasis}",
         "type": "color"
       },
       "semi_bold": {
@@ -317,7 +317,7 @@
     },
     "heading_2": {
       "foreground_color": {
-        "value": "{foreground.surface.mid_emphasis}",
+        "value": "{foreground.container.mid_emphasis}",
         "type": "color"
       },
       "semi_bold": {
@@ -332,7 +332,7 @@
     },
     "heading_3": {
       "foreground_color": {
-        "value": "{foreground.surface.mid_emphasis}",
+        "value": "{foreground.container.mid_emphasis}",
         "type": "color"
       },
       "semi_bold": {
@@ -347,7 +347,7 @@
     },
     "paragraph": {
       "foreground_color": {
-        "value": "{foreground.surface.mid_emphasis}",
+        "value": "{foreground.container.mid_emphasis}",
         "type": "color"
       },
       "md": {
